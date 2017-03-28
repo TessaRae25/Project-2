@@ -6,46 +6,43 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
+        <title>My Note Pad</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
 
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     </head>
     <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <div id="main">
+       <h1>Accomplishment/Good Deed Memo Pad</h1>
 
-        <div class="header-container">
-            <header class="wrapper clearfix">
-                <h1 class="title">Title</h1>
-            </header>
-        </div>
+       <p class="important">* Required Field.</p> 
 
-        <div class="main-container">
-            <div class="main wrapper clearfix">
+       <p class="notify"></p>
 
-                <article>
-                   <?php
+       <form name="noteForm" action="php/upload.php" onsubmit="return validation()" method="post">
 
-                    /* Your PHP below. */
-                    
-                   ?>
-                </article>
+            <p>
+                <label for="currentDate">Today's Date*:</label>
+                <input type="text" name="todaydate" id="currentDate">
+            </p>
 
+            <p>
+                <label for="note">Fill out note below*:</label><br>
+                <textarea type="text" name="note" id="note" placeholder="Write Your Accomplishment/good deed here!"></textarea>
+            </p>
 
-            </div> <!-- #main -->
-        </div> <!-- #main-container -->
+            <input type="submit" value="Submit Memo">
 
-        <div class="footer-container">
-            <footer class="wrapper">
-                
-            </footer>
-        </div>
+        </form>
+
+        <a href="http://localhost:8888/project-2-new/php/view.php">View Past Memos</a>
+
+    </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.js"><\/script>')</script>
